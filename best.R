@@ -27,16 +27,5 @@ best <- function(state, outcome){
   concreteStateSubset <- subset(outcomeData, State == state)
   minValue <- min(concreteStateSubset[measuredColumnNumber], na.rm = T)
   minRow <- subset(concreteStateSubset, concreteStateSubset[[measuredColumnNumber]] == minValue)
-  ##maxRow <- concreteStateSubset[,]
-  ##outcomeData[,measuredColumnNumber] <- complete.cases(outcomeData[,measuredColumnNumber])
-  ##f <- tapply(outcomeData[,measuredColumnNumber], outcomeData[,7], function(x) min(x, na.rm = T))
-  ##minRow <- subset(outcomeData, outcomeData[[measuredColumnNumber]] == f[state])
-  ##result <- as.vector(order(minRow[,2]))
-  ##print(result, sep = " | ")
-  ##print (f[state])
-  ##name <- subset(outcomeData, outcomeData[[outcomeNumber]] == f[state])
-  ##outcomeSplittedByState <- split(outcomeData, outcomeData$State)
-  ##concreteState <- outcomeSplittedByState[state]
-  ##applied <- sapply(concreteState, function(x, ) max(x[, measuredColumnNumber], na.rm = T))
   minRow$Hospital.Name
 }
